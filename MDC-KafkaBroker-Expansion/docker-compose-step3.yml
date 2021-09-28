@@ -1,0 +1,34 @@
+version: "3"
+services:
+  kafka_1:
+    image: confluentinc/cp-server:latest
+    hostname: kafka_1
+    container_name: kafka_1
+    environment:
+      KAFKA_CONFLUENT_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_OFFSET_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+  kafka_2:
+    image: confluentinc/cp-server:latest
+    hostname: kafka_2
+    container_name: kafka_2
+    environment:
+      KAFKA_CONFLUENT_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_OFFSET_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+  kafka_3:
+    image: confluentinc/cp-server:latest
+    hostname: kafka_3
+    container_name: kafka_3
+    environment:
+      KAFKA_CONFLUENT_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_OFFSET_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+  kafka_4:
+    image: confluentinc/cp-server:latest
+    hostname: kafka_4
+    container_name: kafka_4
+    environment:
+      KAFKA_CONFLUENT_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'
+      KAFKA_CONFLUENT_OFFSET_PLACEMENT_CONSTRAINTS: '{"version": 2,"replicas": [{"count": 2,"constraints": {"rack": "DC1"}},{"count": 2,"constraints": {"rack": "DC2"}}]}'

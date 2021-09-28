@@ -1,1 +1,1 @@
-./kafka-topics --create --bootstrap-server localhost:9092 --topic test --partitions 1 --replica-placement /opt/Dev/cp-kafka-local/dc1.json --config min.insync.replicas=2
+./kafka-topics --create --bootstrap-server localhost:9092 --topic test --partitions 1 --replica-placement ${MDC_REPLICA_PLACEMENT_JSON_PATH} --config min.insync.replicas=3
